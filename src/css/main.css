@@ -85,3 +85,52 @@ header {
     }
   }
 }
+
+footer {
+  background-color: #121519;
+  border-top: 1px solid white;
+
+  section {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 40px 16px 0 16px;
+    border: 1px solid white;
+    border-width: 0 1px;
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+
+      div {
+        ul {
+          margin-top: 20px;
+          display: flex;
+          flex-direction: column;
+          gap: 16px;
+        }
+
+        a {
+          font-family: "Inter", sans-serif;
+        }
+      }
+    }
+
+    .footer-info {
+      p {
+        font-family: "Inter", sans-serif;
+        margin-top: 8px;
+      }
+
+      div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 20px;
+        margin-top: 20px;
+        font-size: 12px;
+        font-weight: 400;
+      }
+    }
+  }
+}
+
