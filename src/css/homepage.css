@@ -61,11 +61,44 @@
     }
   }
   
+  .support-independent-artists {
+    border-bottom: 1px solid ;
+  
+    article {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid ;
+      border-width: 0 1px;
+      gap: 40px;
+  
+      .info {
+        max-width: 383px;
+  
+        .info-description {
+          margin-top: 40px;
+          display: flex;
+          flex-direction: column;
+          gap: 16px;
+          font-family: "Inter", sans-serif;
+          color: rgba(255, 255, 255, 0.8);
+          line-height: 1.5;
+        }
+      }
+  
+      img {
+        aspect-ratio: 1;
+        max-width: 423px;
+      }
+    }
+  }
+
   .who-are-we {
     div {
       display: flex;
       justify-content: center;
       gap: 40px;
+
       max-width: 1280px;
       margin: 0 auto;
       padding: 100px 16px;
@@ -94,4 +127,6 @@
       }
     }
   }
+  
+    
   
