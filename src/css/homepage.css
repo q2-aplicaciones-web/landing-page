@@ -1,0 +1,46 @@
+.create-it-own-it {
+    border: 1px solid;
+    border-width: 1px 0px;
+  
+    .wrapper {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 20px 16px 40px 16px;
+  
+      border: 1px solid;
+      border-width: 0 1px;
+      .title {
+        text-align: center;
+        padding: 20px 0 40px 0;
+        font-size: 24px;
+      }
+  
+      .content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+  
+        img {
+          aspect-ratio: 1;
+          max-width: 423px;
+        }
+  
+        .info {
+          display: flex;
+          flex-direction: column;
+          gap: 16px;
+          max-width: 383px;
+  
+          p {
+            margin: 20px 0;
+            font-family: "Inter", sans-serif;
+          }
+        }
+      }
+    }
+  
+    .content {
+      display: flex;
+    }
+  }
