@@ -61,3 +61,37 @@
     }
   }
   
+  .who-are-we {
+    div {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 100px 16px;
+  
+      border: 1px solid;
+      border-width: 0 1px;
+  
+      article {
+        max-width: 450px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+  
+        p,
+        a {
+          font-family: "Inter", sans-serif;
+        }
+      }
+  
+      .info {
+        max-width: 383px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+    }
+  }
+  
