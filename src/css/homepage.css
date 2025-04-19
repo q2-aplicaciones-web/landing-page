@@ -1,0 +1,29 @@
+.designs {
+    border-bottom: 1px solid;
+    overflow: hidden;
+  
+    .carousel-item {
+      aspect-ratio: 1;
+      width: 400px;
+    border-radius: 10px;
+    margin: 0 10px;
+    }
+  
+    .carousel-track {
+      animation: scroll 30s linear infinite;
+    }
+  }
+
+  .hero-section {
+    border-top: 1px solid ;
+    overflow: hidden;
+  
+    .carousel-item {
+      aspect-ratio: 1280/600;
+      height: 600px;
+    }
+  
+    .carousel-track {
+      animation: scroll 120s linear infinite;
+    }
+  }
