@@ -130,3 +130,17 @@
   
     
   
+
+  .hero-section {
+    border-top: 1px solid ;
+    overflow: hidden;
+  
+    .carousel-item {
+      aspect-ratio: 1280/600;
+      height: 600px;
+    }
+  
+    .carousel-track {
+      animation: scroll 120s linear infinite;
+    }
+  }
