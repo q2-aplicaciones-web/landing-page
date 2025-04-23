@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Kumbh Sans', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('../../public/login-form-image.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+  
+  .login-container {
+    background-color: #20252C;
+    width: 420px;
+    padding: 40px 32px;
+    border-radius: 24px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    color: #fff;
+  }
+  
+  .login-box .header {
+    margin-bottom: 2rem;
+  }
+  
+  .login-box h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: #fff;
+  }
+  
+  label {
+    font-size: 0.95rem;
+    margin-bottom: 6px;
+    display: block;
+  }
+  
+  input[type="email"],
+  .password-wrapper input
+   {
+    width: 100%;
+    padding: 10px 40px 10px 10px;
+    background-color: #A1AAB5;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: #111;
+  }
+  
+  .password-wrapper {
+    position: relative;
+  }
+  
+  .toggle-icon {
+    position: absolute;
+    right: 10px;
+    top: 38%;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+  }
+  
+  .links {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .links a {
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 4px;
+  }
+  
+  .links .dont-have-accont {
+    color: #1689F4;
+    font-weight: 700;
+  }
+  
+  .login-btn {
+    background-color: transparent;
+    color: #fff;
+    font-weight: 700;
+    font-size: 16px;
+    padding: 10px 24px;
+    border-radius: 999px;
+    border: 1.5px solid #fff;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.2s;
+  }
+  
+  .login-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    z-index: 999;
+  }
+  
+  .back-button svg {
+    stroke: #fff;
+    transition: transform 0.2s ease;
+  }
+  
+  .back-button:hover svg {
+    transform: translateX(-4px);
+  }
+  
+
+
+
+  
