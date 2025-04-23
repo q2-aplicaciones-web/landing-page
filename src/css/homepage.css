@@ -71,6 +71,9 @@
       border: 1px solid ;
       border-width: 0 1px;
       gap: 40px;
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 40px 16px;
   
       .info {
         max-width: 383px;
