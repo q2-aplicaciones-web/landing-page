@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <meta name="description" content="Join Quri today and start designing, customizing, and selling unique T-shirts. Quick sign-up for artists, creators, and fans of personalized apparel.">
+  <meta name="keywords" content="Quri register, sign up Quri, design T-shirts, custom apparel, t-shirt marketplace, personalized fashion, Quri account">
+  <meta name="author" content="Quri Team">
+
+  <link rel="stylesheet" href="./css/register.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Istok+Web:wght@700&family=Kumbh+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <title>Register | Quri</title>
+</head>
+<body>
+
+  <button
+    id="back-button"
+    class="back-button"
+    aria-label="Go back to hub"
+  >
+    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+      stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+      class="lucide lucide-arrow-left">
+      <path d="m12 19-7-7 7-7" />
+      <path d="M19 12H5" />
+    </svg>
+  </button>
+
+  <div class="register-container">
+    <div class="register-box">
+      <div class="header">
+        <h1>Register</h1>
+      </div>
+
+      <form action="#" method="post">
+        <label for="firstName">First Name:</label>
+        <input
+          type="text"
+          id="firstName"
+          name="firstName"
+          required
+          aria-label="Enter your first name"
+        />
+
+        <label for="secondName">Second Name:</label>
+        <input
+          type="text"
+          id="secondName"
+          name="secondName"
+          aria-label="Enter your second name (optional)"
+        />
+
+        <label for="username">Username:</label>
+        <input
+          type="text"
+          id="username"
+          name="username"
+          required
+          aria-label="Choose a username"
+        />
+
+        <label for="email">Email:</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          required
+          aria-label="Enter your email address"
+        />
+
+        <label for="phone">Phone Number:</label>
+        <input
+          type="tel"
+          id="phone"
+          name="phone"
+          required
+          aria-label="Enter your phone number"
+        />
+
+        <div class="checkbox-group">
+          <label for="terms">
+          <input
+            type="checkbox"
+            required
+            aria-label="Accept Terms and Conditions"
+          />
+            I accept
+            <a href="#" aria-label="Read Terms and Conditions">
+              Terms and Conditions
+            </a>
+          </label>
+        </div>
+
+        <div class="checkbox-group">
+          <label for="offers">
+          <input
+            type="checkbox"
+            aria-label="Opt in to special offers and early access"
+          />
+            I want to receive special offers, new drops, and early access to exclusive designs.
+          </label>
+        </div>
+
+        <button
+          type="submit"
+          class="register-btn btn-animated"
+          aria-label="Submit registration"
+        >
+          Register
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    const backButton = document.getElementById('back-button');
+    backButton.addEventListener('click', () => {
+      window.history.back();
+    });
+  </script>
+</body>
+</html>
