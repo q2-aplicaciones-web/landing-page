@@ -5,59 +5,72 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link rel="stylesheet" href="../src/css/login.css" />
   <link href="https://fonts.googleapis.com/css2?family=Istok+Web:wght@700&family=Kumbh+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <title>Login</title>
+  <title i18n="title_login">Login</title>
 </head>
 <body>
 
-  <div id="back-button" class="back-button" aria-label="Go back">
-    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <path d="m12 19-7-7 7-7" />
-      <path d="M19 12H5" />
-    </svg>
-  </div>
+<div id="back-button" class="back-button" aria-label="Go back" i18n="btn_back">
+  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="m12 19-7-7 7-7" />
+    <path d="M19 12H5" />
+  </svg>
+</div>
 
-  <div class="login-container">
-    <div class="login-box">
-      <div class="header">
-        <h1>Login</h1>
+<div class="login-container">
+  <div class="login-box">
+    <div class="header">
+      <h1 i18n="header_login">Login</h1>
+      <div class="custom-dropdown" id="language-dropdown">
+        <button class="dropdown-toggle" aria-haspopup="true" aria-expanded="false" aria-label="Select language" i18n="language-selector">
+          🌐 EN
+        </button>
+        <ul class="dropdown-menu" role="menu">
+          <li><button class="dropdown-item lang-btn" data-lang="en" i18n="lang-en">EN</button></li>
+          <li><button class="dropdown-item lang-btn" data-lang="es" i18n="lang-es">ES</button></li>
+        </ul>
+      </div>
+    </div>
+
+    <form action="#" method="post">
+      <label for="email" i18n="label_email">Username/Email:</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="password" i18n="label_password">Password:</label>
+      <div class="password-wrapper">
+        <input type="password" id="password" name="password" required />
+        <img src="../public/login-eye.png" alt="Toggle password visibility" class="toggle-icon" id="togglePassword" />
       </div>
 
-      <form action="#" method="post">
-        <label for="email">Username/Email:</label>
-        <input type="email" id="email" name="email" required />
+      <div class="links">
+        <a href="#" i18n="link_forgot_password">Forgot password?</a>
+        <a href="#" class="dont-have-accont" i18n="link_no_account">Don’t have an account?</a>
+      </div>
 
-        <label for="password">Password:</label>
-        <div class="password-wrapper">
-          <input type="password" id="password" name="password" required />
-          <img src="../public/login-eye.png" alt="Toggle password visibility" class="toggle-icon" id="togglePassword" />
-        </div>
-
-        <div class="links">
-          <a href="#">Forgot password?</a>
-          <a href="#" class="dont-have-accont">Don’t have an account?</a>
-        </div>
-
-        <button type="submit" class="login-btn">Login</button>
-      </form>
-    </div>
+      <button type="submit" class="login-btn" i18n="btn_login">Login</button>
+    </form>
   </div>
+</div>
 
-  <script>
-    const togglePassword = document.getElementById('togglePassword');
-    const passwordInput = document.getElementById('password');
-    let isVisible = false;
+<script>
+  const togglePassword = document.getElementById('togglePassword');
+  const passwordInput = document.getElementById('password');
+  let isVisible = false;
 
-    togglePassword.addEventListener('click', () => {
-      isVisible = !isVisible;
-      passwordInput.type = isVisible ? 'text' : 'password';
-      togglePassword.src = isVisible 
-        ? '../public/login-eye.png' 
-        : '../public/login-eye-closed.png';
-    });
+  togglePassword.addEventListener('click', () => {
+    isVisible = !isVisible;
+    passwordInput.type = isVisible ? 'text' : 'password';
+    togglePassword.src = isVisible
+            ? '../public/login-eye.png'
+            : '../public/login-eye-closed.png';
+  });
 
-    document.getElementById('back-button').addEventListener('click', () => {
-      window.history.back();
-    });
-  </script>
+  document.getElementById('back-button').addEventListener('click', () => {
+    window.history.back();
+  });
+</script>
+
+<script src="js/languages/login/en.js"></script>
+<script src="js/languages/login/es.js"></script>
+<script src="js/i18n.js"></script>
 </body>
 </html>
