@@ -7,8 +7,6 @@
 
   <link rel="stylesheet" href="src/css/infinite-carousel.css" />
   <link rel="stylesheet" href="src/css/homepage.css" />
-
-
   <link rel="stylesheet" href="src/css/main.css">
   <link rel="stylesheet" href="src/css/homepage.css">
   <link rel="stylesheet" href="src/css/infinite-carousel.css">
@@ -18,41 +16,41 @@
 <body>
 <header>
   <section>
-    <a href="index.html">
+    <a href="index.html" aria-label="Go to homepage">
       <h1 i18n="header_title">q2</h1>
     </a>
-    <nav>
+    <nav aria-label="Main navigation">
       <ul>
-        <li><a href="./src/faq.html" i18n="nav_faq">FaQ</a></li>
-        <li><a href="./src/about.html" i18n="nav_about">About</a></li>
-        <li><a href="contact.html" i18n="nav_contact">Contact</a></li>
+        <li><a href="./src/faq.html" i18n="nav_faq" aria-label="Frequently Asked Questions">FaQ</a></li>
+        <li><a href="./src/about.html" i18n="nav_about" aria-label="About us">About</a></li>
+        <li><a href="contact.html" i18n="nav_contact" aria-label="Contact us">Contact</a></li>
       </ul>
     </nav>
     <div>
-      <div class="custom-dropdown" id="language-dropdown">
+      <div class="custom-dropdown" id="language-dropdown" aria-label="Language selector">
         <button class="dropdown-toggle" aria-haspopup="true" aria-expanded="false" aria-label="Select language" i18n="language-selector">
           🌐 EN
         </button>
         <ul class="dropdown-menu" role="menu">
-          <li><button class="dropdown-item lang-btn" data-lang="en" i18n="lang-en">EN</button></li>
-          <li><button class="dropdown-item lang-btn" data-lang="es" i18n="lang-es">ES</button></li>
+          <li><button class="dropdown-item lang-btn" data-lang="en" i18n="lang-en" aria-label="Switch to English">EN</button></li>
+          <li><button class="dropdown-item lang-btn" data-lang="es" i18n="lang-es" aria-label="Switch to Spanish">ES</button></li>
         </ul>
       </div>
-      <button class="join-btn" onclick="window.location.href='src/register.html';" i18n="btn_join">Join</button>
-      <button class="login-btn" onclick="window.location.href='src/login.html';" i18n="btn_login">Login</button>
+      <button class="join-btn" onclick="window.location.href='src/register.html';" i18n="btn_join" aria-label="Join now">Join</button>
+      <button class="login-btn" onclick="window.location.href='src/login.html';" i18n="btn_login" aria-label="Login to your account">Login</button>
     </div>
   </section>
 </header>
 
-<section class="hero-section">
-  <div class="carousel-container">
-    <div class="carousel-track" id="carousel">
+<section class="hero-section" aria-label="Hero section">
+  <div class="carousel-container" aria-label="Image carousel">
+    <div class="carousel-track" id="carousel" aria-live="polite">
       <!-- Carousel items remain unchanged -->
     </div>
   </div>
 </section>
 
-<section class="create-it-own-it">
+<section class="create-it-own-it" aria-label="Create it. Own it.">
   <section class="wrapper">
     <section class="title">
       <h2 i18n="create_title">Create it. Own it.</h2>
@@ -86,15 +84,15 @@
   </section>
 </section>
 
-<section class="designs">
-  <div class="carousel-container">
-    <div class="carousel-track" id="carousel">
+<section class="designs" aria-label="Designs section">
+  <div class="carousel-container" aria-label="Designs carousel">
+    <div class="carousel-track" id="carousel" aria-live="polite">
       <!-- Carousel items remain unchanged -->
     </div>
   </div>
 </section>
 
-<section class="support-independent-artists">
+<section class="support-independent-artists" aria-label="Support independent artists">
   <article>
     <div class="info">
       <h2 i18n="support_title">Support independent artists. Discover your next favorite tee.</h2>
@@ -118,7 +116,7 @@
   </article>
 </section>
 
-<section class="who-are-we">
+<section class="who-are-we" aria-label="Who are we section">
   <div>
     <article>
       <h2 i18n="who_title">Who are we?</h2>
@@ -127,7 +125,7 @@
         sell, and wear unique T-shirts — effortlessly.
       </p>
 
-      <a href="" i18n="who_link">Learn more</a>
+      <a href="" i18n="who_link" aria-label="Learn more about us">Learn more</a>
     </article>
     <article>
       <h2 i18n="cost_title">How much does it cost?</h2>
@@ -135,43 +133,43 @@
         It&apos;s free to get started. We only earn when you do.
         Manufacturers get custom rates.
       </p>
-      <a href="" i18n="cost_link">Learn more</a>
+      <a href="" i18n="cost_link" aria-label="Learn more about pricing">Learn more</a>
     </article>
   </div>
 </section>
 
-<footer>
+<footer aria-label="Footer">
   <section>
-    <nav>
+    <nav aria-label="Footer navigation">
       <div>
         <h3 i18n="footer_home_title">Home Page</h3>
         <ul>
-          <li><a href="" i18n="footer_home_community">Community</a></li>
+          <li><a href="" i18n="footer_home_community" aria-label="Community page">Community</a></li>
         </ul>
       </div>
 
       <div>
         <h3 i18n="footer_company_title">Company</h3>
         <ul>
-          <li><a href="/src/about.html" i18n="footer_company_about">About us</a></li>
-          <li><a href="" i18n="footer_company_contact">Contact us</a></li>
+          <li><a href="/src/about.html" i18n="footer_company_about" aria-label="About us page">About us</a></li>
+          <li><a href="" i18n="footer_company_contact" aria-label="Contact us page">Contact us</a></li>
         </ul>
       </div>
 
       <div>
         <h3 i18n="footer_pricing_title">Pricing</h3>
         <ul>
-          <li><a href="" i18n="footer_pricing_how">How it works</a></li>
+          <li><a href="" i18n="footer_pricing_how" aria-label="How it works page">How it works</a></li>
         </ul>
       </div>
 
       <div>
         <h3 i18n="footer_social_title">Social Media</h3>
         <ul>
-          <li><a href="" i18n="footer_social_instagram">Instagram</a></li>
-          <li><a href="" i18n="footer_social_x">X</a></li>
-          <li><a href="" i18n="footer_social_facebook">Facebook</a></li>
-          <li><a href="" i18n="footer_social_tiktok">TikTok</a></li>
+          <li><a href="" i18n="footer_social_instagram" aria-label="Instagram page">Instagram</a></li>
+          <li><a href="" i18n="footer_social_x" aria-label="X (formerly Twitter) page">X</a></li>
+          <li><a href="" i18n="footer_social_facebook" aria-label="Facebook page">Facebook</a></li>
+          <li><a href="" i18n="footer_social_tiktok" aria-label="TikTok page">TikTok</a></li>
         </ul>
       </div>
     </nav>
@@ -179,7 +177,7 @@
     <div class="footer-info">
       <h2 i18n="footer_brand">q2</h2>
       <p i18n="footer_description">
-        Your creative space is waiting. <a href="" i18n="footer_sign_up">Sign up</a> to get
+        Your creative space is waiting. <a href="" i18n="footer_sign_up" aria-label="Sign up page">Sign up</a> to get
         started.
       </p>
 
@@ -187,13 +185,12 @@
         <h3 i18n="footer_location">Lima, PE</h3>
 
         <p>
-          <a href="" i18n="footer_privacy">Privacy Policy</a> | <a href="" i18n="footer_terms">Terms & Conditions</a>
+          <a href="" i18n="footer_privacy" aria-label="Privacy policy page">Privacy Policy</a> | <a href="" i18n="footer_terms" aria-label="Terms and conditions page">Terms & Conditions</a>
         </p>
       </div>
     </div>
   </section>
 </footer>
-
 
 <script src="src/js/languages/index/en.js"></script>
 <script src="src/js/languages/index/es.js"></script>
