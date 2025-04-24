@@ -48,16 +48,23 @@
   .register-box {
     width: 65%;
   }
-  
-  /* === HEADER === */
-  .register-box .header {
+
+  .header {
+    display: flex;
+    align-items: center;
     margin-bottom: 2rem;
+
+    .dropdown-toggle {
+    color: white;
+
+    }
   }
   
+  /* === HEADER === */
+
   .register-box h1 {
     font-size: 2rem;
     font-weight: 700;
-    margin-bottom: 1.5rem;
     color: #fff;
   }
   
