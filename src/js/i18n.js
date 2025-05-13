@@ -1,65 +1,56 @@
-const i18n = {
-    es,
-    en
-}
+const AVAILABLE_LANGUAGES = ["en", "es"];
+const LANGUAGE_DICTIONARY = { en, es };
+const DEFAULT_LANGUAGE = "es";
+
+const languageButton = document.getElementById("language-button");
 
 function changeLanguage(lang) {
-    console.log("lang", lang);
-    localStorage.setItem('language', lang);
-
-    const elementsToTranslate = document.querySelectorAll('[i18n]');
-
-    console.log("elementsToTranslate", elementsToTranslate);
-
-    elementsToTranslate.forEach(element => {
-        const key = element.getAttribute('i18n');
-        if (i18n[lang] && i18n[lang][key]) {
-            element.innerText = i18n[lang][key];
-        }
-        if (element.getAttribute('i18n-alt') && i18n[lang] && i18n[lang][key]) {
-            element.setAttribute('alt', i18n[lang][key]);
-        }
-    });
-
-    if (i18n[lang] && i18n[lang].title) {
-        document.title = i18n[lang].title;
+    if (!AVAILABLE_LANGUAGES.includes(lang)) {
+        console.error(`Language ${lang} is not supported.`);
+        return;
     }
+
+    const language = LANGUAGE_DICTIONARY[lang];
+    const i18nElements = document.querySelectorAll("[i18n]");
+
+    i18nElements.forEach((element) => {
+        const key = element.getAttribute("i18n");
+        const path = key.split(".");
+
+        const value = path.reduce((acc, part) => acc?.[part], language);
+
+        element.innerHTML = value || `[${key}]`; // fallback visible
+    });
+
+    // Update language button label
+    const nextLang = getNextLanguage(lang);
+    languageButton.textContent = nextLang.toUpperCase();
+    languageButton.setAttribute("aria-label", `Switch to ${nextLang.toUpperCase()}`);
+
+    console.log("Language set to:", lang);
 }
-document.addEventListener('DOMContentLoaded', function () {
-    const dropdownButtons = document.querySelectorAll('.dropdown-toggle');
 
-    dropdownButtons.forEach((dropdownButton) => {
-        const dropdownMenu = dropdownButton.nextElementSibling; // El <ul> que contiene las opciones del idioma
+function getNextLanguage(currentLang) {
+    const currentIndex = AVAILABLE_LANGUAGES.indexOf(currentLang);
+    return AVAILABLE_LANGUAGES[(currentIndex + 1) % AVAILABLE_LANGUAGES.length];
+}
 
-        dropdownButton.addEventListener('click', function (event) {
-            const isExpanded = dropdownButton.getAttribute('aria-expanded') === 'true';
-            dropdownButton.setAttribute('aria-expanded', !isExpanded);
-            dropdownMenu.style.display = isExpanded ? 'none' : 'block';
-        });
+function setLanguage(lang) {
+    localStorage.setItem("lang", lang);
+    changeLanguage(lang);
+}
 
-        document.addEventListener('click', function (event) {
-            if (!dropdownButton.contains(event.target) && !dropdownMenu.contains(event.target)) {
-                dropdownMenu.style.display = 'none';
-                dropdownButton.setAttribute('aria-expanded', 'false');
-            }
-        });
-    });
+function initLanguage() {
+    const savedLang = localStorage.getItem("lang");
+    const initialLang = AVAILABLE_LANGUAGES.includes(savedLang) ? savedLang : DEFAULT_LANGUAGE;
+    changeLanguage(initialLang);
+}
 
-    const langButtons = document.querySelectorAll('.lang-btn');
-    langButtons.forEach(button => {
-        button.addEventListener('click', function () {
-            const lang = button.getAttribute('data-lang');
-            changeLanguage(lang);
-        });
-    });
+languageButton.addEventListener("click", () => {
+    const currentLang = localStorage.getItem("lang") || DEFAULT_LANGUAGE;
+    const nextLang = getNextLanguage(currentLang);
+    setLanguage(nextLang);
 });
 
-
-function loadLanguage() {
-    const lang = localStorage.getItem('language');
-    if (lang) {
-        changeLanguage(lang);
-    }
-}
-
-loadLanguage();
+// Initialize on load
+initLanguage();
