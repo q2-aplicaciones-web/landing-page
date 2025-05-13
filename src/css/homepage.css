@@ -1,0 +1,149 @@
+.create-it-own-it {
+    border: 1px solid;
+    border-width: 1px 0px;
+  
+    .wrapper {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 20px 16px 40px 16px;
+  
+      border: 1px solid;
+      border-width: 0 1px;
+      .title {
+        text-align: center;
+        padding: 20px 0 40px 0;
+        font-size: 24px;
+      }
+  
+      .content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+  
+        img {
+          aspect-ratio: 1;
+          max-width: 423px;
+        }
+  
+        .info {
+          display: flex;
+          flex-direction: column;
+          gap: 16px;
+          max-width: 383px;
+  
+          p {
+            margin: 20px 0;
+            font-family: "Inter", sans-serif;
+          }
+        }
+      }
+    }
+  
+    .content {
+      display: flex;
+    }
+  }
+
+.designs {
+    border-bottom: 1px solid;
+    overflow: hidden;
+  
+    .carousel-item {
+      aspect-ratio: 1;
+      width: 400px;
+    border-radius: 10px;
+    margin: 0 10px;
+    }
+  
+    .carousel-track {
+      animation: scroll 30s linear infinite;
+    }
+  }
+  
+  .support-independent-artists {
+    border-bottom: 1px solid ;
+  
+    article {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid ;
+      border-width: 0 1px;
+      gap: 40px;
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 40px 16px;
+  
+      .info {
+        max-width: 383px;
+  
+        .info-description {
+          margin-top: 40px;
+          display: flex;
+          flex-direction: column;
+          gap: 16px;
+          font-family: "Inter", sans-serif;
+          color: rgba(255, 255, 255, 0.8);
+          line-height: 1.5;
+        }
+      }
+  
+      img {
+        aspect-ratio: 1;
+        max-width: 423px;
+      }
+    }
+  }
+
+  .who-are-we {
+    div {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 100px 16px;
+  
+      border: 1px solid;
+      border-width: 0 1px;
+  
+      article {
+        max-width: 450px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+  
+        p,
+        a {
+          font-family: "Inter", sans-serif;
+        }
+      }
+  
+      .info {
+        max-width: 383px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+    }
+  }
+  
+    
+  
+
+  .hero-section {
+    border-top: 1px solid ;
+    overflow: hidden;
+  
+    .carousel-item {
+      aspect-ratio: 1280/600;
+      height: 600px;
+    }
+  
+    .carousel-track {
+      animation: scroll 120s linear infinite;
+    }
+  }
