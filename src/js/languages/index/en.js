@@ -1,7 +1,7 @@
 const en = {
     "title": "q2",
     "header_title": "q2",
-    "nav_faq": "FaQ",
+    "nav_faq": "FAQ",
     "nav_about": "About",
     "nav_contact": "Contact",
     "btn_join": "Join",
