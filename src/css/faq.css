@@ -91,3 +91,45 @@ details[open] {
 details[open] summary {
   margin-bottom: 20px;
 }
+
+/* Responsive styles for FAQ page */
+@media (max-width: 991.98px) {
+  .contact div ul {
+    gap: 20px;
+  }
+  
+  .contact div ul li {
+    padding: 30px 20px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .questions {
+    padding: 30px 16px;
+  }
+  
+  .contact div ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .contact div ul li {
+    max-width: 100%;
+    width: 90%;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .questions {
+    padding: 20px 12px;
+    gap: 20px;
+  }
+  
+  details {
+    padding: 0.5em 0.3em 0;
+  }
+  
+  .contact div {
+    padding: 30px 12px;
+  }
+}

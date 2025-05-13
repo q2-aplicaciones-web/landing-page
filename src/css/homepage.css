@@ -1,3 +1,9 @@
+/* Base responsive styles */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 .create-it-own-it {
     border: 1px solid;
     border-width: 1px 0px;
@@ -147,3 +153,154 @@
       animation: scroll 120s linear infinite;
     }
   }
+
+/* Mobile menu styles */
+.mobile-menu-button {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: white;
+  padding: 8px;
+}
+
+/* Footer spacing improvements */
+footer section nav {
+  gap: 3.5rem;
+  margin-bottom: 2rem;
+}
+
+footer section nav div {
+  margin-bottom: 2rem;
+}
+
+footer section nav div ul {
+  margin-top: 1.5rem;
+  gap: 1.5rem;
+}
+
+footer section .footer-info {
+  margin-top: 3.5rem;
+}
+
+footer section .footer-info div {
+  margin-top: 2.5rem;
+  gap: 2rem;
+}
+
+/* Responsive styles */
+@media (max-width: 1280px) {
+  .create-it-own-it .wrapper,
+  .support-independent-artists article,
+  .who-are-we div {
+    max-width: 100%;
+  }
+}
+
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+  .create-it-own-it .wrapper .content {
+    gap: 20px;
+  }
+  
+  .create-it-own-it .wrapper .content img,
+  .support-independent-artists article img {
+    max-width: 350px;
+  }
+  
+  .hero-section .carousel-item {
+    height: 450px;
+  }
+  
+  .who-are-we div {
+    padding: 60px 16px;
+  }
+    /* Footer responsive adjustments */
+  footer section nav {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    margin-bottom: 2.5rem;
+  }
+  
+  footer section nav div {
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+  /* Hero section and content layout */
+  
+  .header-nav-mobile {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+  
+  .mobile-menu-button {
+    display: block;
+  }
+  
+  /* Hero section */
+  .hero-section .carousel-item {
+    height: 350px;
+  }
+  
+  /* Create it Own it section */
+  .create-it-own-it .wrapper .content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .create-it-own-it .wrapper .content img {
+    max-width: 300px;
+    margin-bottom: 20px;
+  }
+  
+  /* Support section */
+  .support-independent-artists article {
+    flex-direction: column;
+    padding: 30px 16px;
+    gap: 30px;
+  }
+  
+  .support-independent-artists article .info {
+    max-width: 100%;
+    text-align: center;
+  }
+  
+  /* Who are we section */
+  .who-are-we div {
+    flex-direction: column;
+    gap: 40px;
+    padding: 50px 16px;
+  }
+  
+  .who-are-we div article {
+    max-width: 100%;
+  }
+  
+  /* Carousel items */
+  .designs .carousel-item {
+    width: 300px;
+  }
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+  .hero-section .carousel-item {
+    height: 250px;
+  }
+  
+  .create-it-own-it .wrapper .content img,
+  .support-independent-artists article img {
+    max-width: 100%;
+  }
+  
+  .who-are-we div {
+    padding: 30px 16px;
+  }
+}

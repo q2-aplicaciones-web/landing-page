@@ -40,99 +40,202 @@
     cursor: pointer;
   }
   
-  header {
-    position: relative;
-    border-width: 0 0 1px 0;
-  
-    section {
-      max-width: 1280px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin: 0 auto;
-      padding: 0 16px;
-      height: 60px;
-  
-      border: solid;
-      border-width: 0 1px;
-  
-      nav {
-        left: 0;
-        right: 0;
-        position: absolute;
-        display: flex;
-        justify-content: center;
-        width: fit-content;
+header {
+    border-bottom: 1px solid #d8d9da;
+    height: 60px;
+    display: flex;
+    align-items: center;
+
+    .container {
         margin: 0 auto;
-  
-        font-family: "Inter", sans-serif;
-        ul {
-          display: flex;
-          gap: 16px;
-          font-size: 16px;
-        }
-      }
-  
-      div {
-        button {
-          font-size: 16px;
-          color: white;
-        }
-  
-        button.login-btn {
-          border: currentColor solid 1px;
-        }
-      }
-    }
-  }
-  
-  footer {
-    background-color: #121519;
-    border-top: 1px solid white;
-  
-    section {
-      max-width: 1280px;
-      margin: 0 auto;
-      padding: 40px 16px 0 16px;
-      border: 1px solid white;
-      border-width: 0 1px;
-  
-      nav {
+        height: 100%;
+
         display: flex;
+        align-items: center;
         justify-content: space-between;
-  
-        div {
-          ul {
-            margin-top: 20px;
+
+        width: 100%;
+        max-width: 1280px;
+        padding: 0 1rem;
+
+        & > div,
+        h1,
+        .user-buttons {
             display: flex;
-            flex-direction: column;
-            gap: 16px;
-          }
-  
-          a {
-            font-family: "Inter", sans-serif;
-          }
+            flex-grow: 1;
+            flex-basis: 0;
         }
-      }
-  
-      .footer-info {
-        p {
-          font-family: "Inter", sans-serif;
-          margin-top: 8px;
+
+        nav > ul {
+            display: flex;
+            gap: 1rem;
         }
-  
-        div {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          padding-bottom: 20px;
-          margin-top: 20px;
-          font-size: 12px;
-          font-weight: 400;
+        nav > .header-nav-mobile {
+            display: none;
         }
-      }
+
+        .user-buttons {
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+            justify-content: end;
+        }
     }
-  }
+
+    button.header-button { 
+        background-color: transparent;
+        border: none;
+        border: 1px solid #d8d9da;
+        border-radius: 999px;
+    }
+
+    .mobile-menu-button {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        position: relative;
+
+        .container {
+            padding: 0 1rem;
+            justify-content: space-between;
+
+            h1 {
+                font-size: 20px;
+            }
+
+            nav {
+                display: none;
+            }            nav[isMobile] {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+                position: absolute;
+                background-color:#20252c;
+                z-index: 100;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100dvh;
+                padding: 1rem;
+                animation: slideIn 0.3s ease-in-out;
+
+                & > ul {
+                    flex-direction: column;
+                    gap: 1rem;
+                }
+            }
+            nav[isMobile] > .header-nav-mobile {
+                display: flex;
+            }
+
+            .user-buttons a {
+                display: none;
+            }            .mobile-menu-button {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 40px;
+                height: 40px;
+                border-radius: 999px;
+                background-color: transparent;
+                color: white;
+                border: 1px solid #d8d9da;
+                padding: 8px;
+                transition: transform 0.3s ease, opacity 0.3s ease;
+                z-index: 102;
+
+                &:active {
+                    transform: scale(0.95);
+                }
+            }
+        }
+    }
+}
+
+  
+footer {
+    display: flex;
+    background-color: #000;
+    justify-content: center;
+    color: white;
+
+    & > section {
+        max-width: 1280px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 3rem 1rem 2rem 1rem;
+
+        ul {
+            display: flex;
+            justify-content: space-between;
+            gap: 1.5rem;
+        }
+    }    .footer-bottom {
+        margin-top: 4rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        .footer-bottom-links {
+            display: flex;
+            justify-content: space-between;
+            gap: 1.5rem;
+        }
+
+        &:not(h2) {
+            font-size: 14px;
+        }
+    }
+
+    svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    .links {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        margin-top: 1rem;
+    }
+
+    .social-media {
+        flex-direction: row;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    footer {
+        padding: 2.5rem 1rem 1.5rem 1rem;
+
+        & > section {
+            padding: 0;
+            flex-direction: column;
+            gap: 2rem;
+
+            ul {
+                flex-direction: column;
+                gap: 3.5rem;
+            }
+        }        .footer-bottom {
+            flex-direction: column;
+            gap: 2rem;
+
+            .footer-bottom-links {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+        }
+    }
+    .links {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+}
   
   .custom-dropdown {
     position: relative;
@@ -179,3 +282,35 @@
   .dropdown-item:hover {
     background-color: #f5f5f5;
   }
+
+  /* Animation for mobile menu */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Mobile menu overlay */
+nav[isMobile]::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
+/* Improve styling of the close button in mobile menu */
+.header-nav-mobile .mobile-menu-button {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  z-index: 101;
+}
