@@ -1,0 +1,164 @@
+
+.who-are-we-page {
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+  }
+  
+  .who-are-we-page .wrapper {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 100px 16px;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+  }
+  
+  .who-are-we-page .title h2 {
+    text-align: center;
+    font-size: 32px;
+    padding-bottom: 20px;
+  }
+  
+  .who-are-we-page .info {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    font-family: "Inter", sans-serif;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.6;
+    text-align: center;
+  }
+
+  .our-story {
+    border-bottom: 1px solid white;
+    overflow: hidden;
+  
+    p {
+      font-family: "Inter", sans-serif;
+      text-wrap: balance;
+    }
+  }
+  
+  .story-title {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+  
+    img {
+      aspect-ratio: 1280/475;
+      width: 100%;
+      border-radius: 0;
+    }
+  }
+  
+  .designs {
+    border: 1px solid white;
+    border-width: 0px 1px;
+    padding: 40px 0;
+    max-width: 1280px;
+    margin: 0 auto;
+  
+    .wrapper {
+      text-align: center;
+      max-width: 400px;
+      margin: 40px auto;
+  
+      .info {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        font-family: "Inter", sans-serif;
+        color: rgba(255, 255, 255, 0.8);
+      }
+    }
+  }
+  
+  .story-title h2 {
+    font-size: 48px;
+    font-family: "Sometype Mono", monospace;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .our-story .wrapper {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 40px 0 80px;
+  
+    border: 1px solid white;
+    border-width: 0 1px;
+  
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  
+  .our-story .info {
+    max-width: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.6;
+    text-align: center;
+  }
+
+  .cta {
+    border-top: 1px solid white;
+  }
+  
+  .cta .wrapper {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 80px 16px;
+    justify-content: center;
+    display: flex;
+    gap: 40px;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+  }
+  
+  .cta article {
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    font-family: "Inter", sans-serif;
+    text-align: center;
+  }
+  
+  .cta a.underline {
+    text-decoration: underline;
+  }
+  
+  .wrapper {
+    max-width: 1280px;
+  }
+  /* Responsive */
+  @media (max-width: 768px) {
+    .cta .wrapper {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .who-are-we-page .wrapper {
+      border: none;
+    }
+  
+    .our-story .wrapper {
+      border: none;
+    }
+  
+    .designs {
+      border: none;
+    }
+  
+    .cta .wrapper {
+      border: none;
+    }
+  }

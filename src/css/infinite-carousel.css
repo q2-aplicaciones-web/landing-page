@@ -1,0 +1,25 @@
+.carousel-container {
+    position: relative;
+    padding: 40px 0;
+  }
+  
+  .carousel-track {
+    display: flex;
+    width: max-content;
+  }
+  
+  .carousel-item {
+    flex: 0 0 auto;
+    height: auto;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }

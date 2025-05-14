@@ -1,0 +1,135 @@
+header {
+  border-bottom: 1px solid white;
+}
+
+.questions {
+  max-width: 1280px;
+  margin: 0 auto;
+  border: 1px solid white;
+  border-width: 0 1px;
+  padding: 40px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+details {
+  padding: 0.5em 0.5em 0;
+
+  font-family: "Inter", sans-serif;
+}
+
+.contact {
+  border-top: 1px solid white;
+
+  div {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 40px 16px;
+    border: 1px solid white;
+    border-width: 0 1px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    ul {
+      margin-top: 40px;
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+
+      li {
+        max-width: 400px;
+        width: 100%;
+        text-align: center;
+
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        padding: 40px;
+        border-radius: 12px;
+
+        a {
+          font-family: "Inter", sans-serif;
+          text-decoration: none;
+          color: inherit;
+          &:hover {
+            color: #1689f4;
+          }
+        }
+      }
+    }
+  }
+}
+
+summary {
+  font-weight: bold;
+  margin: -0.5em -0.5em 0;
+  padding: 0.5em;
+  font-family: "Sometype Mono", monospace;
+
+  &:hover {
+    cursor: pointer;
+    color: #1689f4;
+  }
+}
+
+details[open] {
+  padding: 0.5em;
+
+  p {
+    padding: 20px;
+    border: 1px solid white;
+    border-radius: 12px;
+    text-wrap: balance;
+    line-height: 1.6;
+  }
+}
+
+details[open] summary {
+  margin-bottom: 20px;
+}
+
+/* Responsive styles for FAQ page */
+@media (max-width: 991.98px) {
+  .contact div ul {
+    gap: 20px;
+  }
+  
+  .contact div ul li {
+    padding: 30px 20px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .questions {
+    padding: 30px 16px;
+  }
+  
+  .contact div ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .contact div ul li {
+    max-width: 100%;
+    width: 90%;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .questions {
+    padding: 20px 12px;
+    gap: 20px;
+  }
+  
+  details {
+    padding: 0.5em 0.3em 0;
+  }
+  
+  .contact div {
+    padding: 30px 12px;
+  }
+}
